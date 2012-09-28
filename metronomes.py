@@ -71,9 +71,14 @@ params = {'m1' : 0.02,        # mass of the bob (kg)
 ar = random.uniform(-30, 30, 5)*pi/180
 ard = random.uniform(-360, 360, 5)*pi/180
 state0 = concatenate((ar, ard, array([0.0, 0.0])))
+
+# time array
 t = arange(0, 30, 0.01)
+
+# simulate!
 state = odeint(metronomes, state0, t, args=(params,))
 
+# plot results
 figure(figsize=(8,10))
 subplot(3,1,1)
 plot(t,state[:,[0,1,2,3,4]]*180/pi)
