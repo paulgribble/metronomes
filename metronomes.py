@@ -74,15 +74,19 @@ state0 = concatenate((ar, ard, array([0.0, 0.0])))
 t = arange(0, 30, 0.01)
 state = odeint(metronomes, state0, t, args=(params,))
 
-figure()
+figure(figsize=(8,10))
 subplot(3,1,1)
 plot(t,state[:,[0,1,2,3,4]]*180/pi)
+ylabel('METRONOME ANGLES (rad)')
+xlabel('TIME (sec)')
 subplot(3,2,3)
 plot(t[0:200],state[0:200,[0,1,2,3,4]]*180/pi)
 subplot(3,2,4)
 plot(t[-200:-1],state[-200:-1,[0,1,2,3,4]]*180/pi)
 subplot(3,1,3)
 plot(t,state[:,10])
+ylabel('CART POSITION (m)')
+xlabel('TIME (sec)')
 
 # animation
 def animate(state, t):
