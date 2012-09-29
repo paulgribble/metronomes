@@ -95,7 +95,7 @@ xlabel('TIME (sec)')
 
 # animation
 def animate(state, t):
-	figure()
+#	figure()
 	axis('equal')
 	lw = 3
 	b1x = state[0,10] + 0.0
