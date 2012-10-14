@@ -63,8 +63,8 @@ params = {'m1' : 0.02,        # mass of the bob (kg)
           'g'  : 9.81,        # graviational constant
           'Mk' : 5.00,        # stiffness coefficient for cart
           'Md' : 0.001,       # damping coefficient for cart
-          'adamp' : 0.40,     # escapement damping coefficient
-		  'aescp' : 30*pi/180 # escapement angle coefficient
+       'adamp' : 0.40,        # escapement damping coefficient
+       'aescp' : 30*pi/180    # escapement angle coefficient
 }
 
 # initial conditions
