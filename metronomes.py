@@ -163,3 +163,7 @@ def animate(state, t):
 
 # end
 
+# animate!
+
+animate(t,state)
+
